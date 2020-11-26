@@ -1,23 +1,23 @@
 # ThisIsLibrarySystem
 AP Computer Science A Unit 3 GRASPS project.
 
-GRASPS Unit3 Standard classes: Library management system 1.0
+#GRASPS Unit3 Standard classes: Library management system 1.0
 
-Goal
+## Goal
 
 Program a library management system 1.0
 
-Role
+## Role
 
 You are a developer who cooperate in couples. (You work in pairs).
 
 Everyone is writing some part of code. Everyone understands partner’s part and participate in presentation in the end.
 
-Audience
+## Audience
 
 School, City
 
-Situation
+## Situation
 
 A organization needs to set a librarian system. They need to see how it will work. Let’s help them to see how the system could work. Opt one of two types that suits you most. Both options are covering all required actions for later production. Option A is simplistic working solution ready for Alpha testing. Option B is Beta testing/simulation with more users and books. Use array and randomization, reading CSV files if you want.
 
@@ -25,9 +25,9 @@ Option A) desing library as it is suggested below. (Alpha testing) 1.0
 
 Option B) desing library as dynamic system using Arrays/ArrayLists. Use randomization to generate more users and books. (Beta testing) 2.0
 
-Product
+## Product
 
-Task 1:
+### Task 1:
 
 - Create two readers in Library. And create two books.
 
@@ -35,7 +35,7 @@ Task 1:
 
 - Print all Libraty fields in readable format
 
-Task 2:
+### Task 2:
 
 - Borrow book1 to reader1
 
@@ -45,7 +45,7 @@ Task 2:
 
 - change current date to 5 6 2020;
 
-Task 3:
+### Task 3:
 
 - Reader1 Returns book1
 
@@ -55,23 +55,23 @@ Task 3:
 
 - Print all Libraty fields in readable format
 
-Task 4:
+### Task 4:
 
 - Reader2 Returns book2
 
 - Check fines
 
-Constrains
+## Constrains
 
 - All fields are private unless necessary to be visible out of class.
 
 - If something is undefined and you need it, use your creativity and make it up.
 
-Suggested Library structure
+## Suggested Library structure
 
-Class Library
+### Class Library
 
-- Fields:
+#### - Fields:
 
 o name (String)
 
@@ -85,7 +85,7 @@ o reader2 type Reader
 
 o dateToday type Date
 
-- Methods:
+#### - Methods:
 
 o setTodayDate() sets dateToday
 
@@ -115,9 +115,9 @@ For simplicity you can assume that month has 30 days and year has 365 days
 
 4. If the book is returned after the calendar year in which it was expected, there is a fixed fine of 10000 coins
 
-Class Book
+### Class Book
 
-- Fields:
+#### - Fields:
 
 o Title string
 
@@ -133,7 +133,7 @@ o dateExpected type Date
 
 - Book (ID,Title,ISBN)
 
-- Methods:
+#### - Methods:
 
 o get(Reader) set isBorrowed to TRUE, set dateExpected to currentDate+1 month
 
@@ -141,9 +141,9 @@ o return() set isBorrowed to FALSE, set dateExpected=null;
 
 o expected() returns Date
 
-Class Reader
+### Class Reader
 
-- Fields:
+#### - Fields:
 
 o Name (String),
 
@@ -151,11 +151,11 @@ o Email (String),
 
 o ID (int positive number >0)
 
-- Methods:
+#### - Methods:
 
-Class Date
+### Class Date
 
-- Fields:
+#### - Fields:
 
 o Day Constrains: 1 .. 30
 
@@ -165,7 +165,7 @@ o Year Constrains: 1900 .. 2030
 
 - Date(Day,Month,Year)
 
-- Methods:
+#### - Methods:
 
 o getDay returns Day
 
@@ -173,7 +173,7 @@ o getMonth returns Month
 
 o getYear returns Year
 
-Standards/Criteria
+## Standards/Criteria
 
 - Working cooperation in pairs, equal division of tasks, support of each other. Clear division of roles. If there is one person alone, he will join some other team. Only one team has three persons…
 
