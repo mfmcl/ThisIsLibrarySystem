@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Library {
     private String name;
-
+    private ArrayList<Book> allBooks;
+    private ArrayList<Reader> allReaders;
     private Date dateToday;
 
     public void setDateToday(Date dateToday) {
@@ -10,6 +13,7 @@ public class Library {
     public Date getDateToday() {
         return dateToday;
     }
+    
 }
 
     // TODO: arrays?
