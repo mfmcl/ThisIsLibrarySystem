@@ -34,12 +34,12 @@ public class Book {
     System.out.println("ISBN: " + isbn);
     */
 
-    public void get(Reader borrower){
+    public void get(){
         isBorrowed = true;
         dateExpected;
     }
 
-    public void return(){
+    public void returned(){
         isBorrowed = false;
         dateExpected = null;
     }
