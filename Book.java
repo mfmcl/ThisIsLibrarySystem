@@ -11,7 +11,9 @@ public class Book {
     }
 
     Book(int bookID, String title, String isbn) {
-
+        bookID = this.bookID;
+        title = this.title;
+        isbn = this.isbn;
     }    
     /*
         String isbn = "";
@@ -31,4 +33,18 @@ public class Book {
     
     System.out.println("ISBN: " + isbn);
     */
+
+    public void get(Reader borrower){
+        isBorrowed = true;
+        dateExpected;
+    }
+
+    public void return(){
+        isBorrowed = false;
+        dateExpected = null;
+    }
+
+    public Date expected() {
+        return dateExpected;
+    }
 }
