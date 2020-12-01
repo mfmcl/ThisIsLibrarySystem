@@ -1,3 +1,5 @@
+package ThisIsLibrarySystem;
+
 public class Book {
     private String title;
     private int bookID; // TODO: must be > 1
@@ -36,7 +38,7 @@ public class Book {
 
     public void get(){
         isBorrowed = true;
-        dateExpected;
+        dateExpected = dateToday.getMonth();
     }
 
     public void returned(){
@@ -47,4 +49,6 @@ public class Book {
     public Date expected() {
         return dateExpected;
     }
+
+    
 }
