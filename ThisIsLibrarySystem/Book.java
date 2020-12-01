@@ -38,7 +38,7 @@ public class Book {
 
     public void get(){
         isBorrowed = true;
-        dateExpected = dateToday.getMonth();
+       // dateExpected;
     }
 
     public void returned(){
