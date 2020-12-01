@@ -8,7 +8,6 @@ public class Book {
     private Reader borrower;
     private Date dateExpected;
 
-
     Book() {
     }
 
@@ -38,7 +37,7 @@ public class Book {
 
     public void get(){
         isBorrowed = true;
-       // dateExpected;
+        //dateExpected;
     }
 
     public void returned(){
