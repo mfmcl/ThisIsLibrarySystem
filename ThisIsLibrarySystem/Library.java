@@ -1,7 +1,5 @@
 package ThisIsLibrarySystem;
 
-import jdk.internal.vm.compiler.libgraal.LibGraalIsolate;
-
 public class Library {
     private static Book book1 = new Book(1, "50 Shades of Grey");
     private static Book book2 = new Book(2, "Mein Kampf");
