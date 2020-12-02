@@ -8,7 +8,7 @@ public class Library {
     private static Book book2 = new Book(2, "Mein Kampf");
     private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
     private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
-    public static Date dateToday;
+    public static Date dateToday = new Date();
     private int fine;
 
     public void setDateToday(int day, int month, int year) {
@@ -53,9 +53,10 @@ public class Library {
         
         book1.get(reader1);
 
-        System.out.println(reader1.toString());
-        System.out.println(book1.toString());
-        System.out.println("Today's date is " + dateToday.getDay() + " " + dateToday.getMonth() + " " + dateToday.getYear());
+        System.out.println("Today's date is " + dateToday.toString());
+        System.out.println("\nReader 1: " + reader1.toString());
+        System.out.println("\n" + book1.toString());
+        System.out.println("\n" + book2.toString());
 
     }
 }
