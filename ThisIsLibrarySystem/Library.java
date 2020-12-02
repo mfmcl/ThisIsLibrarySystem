@@ -6,7 +6,7 @@ public class Library {
     private static Book book2 = new Book(2, "Mein Kampf", "123456789X");
     private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
     private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
-    public static Date dateToday;
+    public static Date dateToday = new Date(5, 5, 2020);
 
     public void setDateToday(Date dateToday) {
         this.dateToday = dateToday;
