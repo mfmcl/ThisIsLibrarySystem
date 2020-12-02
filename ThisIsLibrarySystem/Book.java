@@ -8,6 +8,7 @@ public class Book {
     private Reader borrower;
     public Date dateExpected;
     public Date dateReturned;
+    private int fine;
 
     //Constructor of the Book object
     //Assigns the bookID and title of the book
@@ -83,6 +84,35 @@ public class Book {
     public void setDateReturned(Date dateReturned) {
         this.dateReturned = dateReturned;
     }
+
+    public int checkFines(){
+
+        //Returning the book before the expected date
+        if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() &&
+        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
+        Book.dateReturned.getYear()==Book.dateExpected.getYear() ||
+        Book.dateReturned.getDay()>=Book.dateExpected.getDay() &&
+        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
+        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
+            fine=0;
+        }
+        //Returning the book after the expected return date, but within the same calendar month of the expected date
+        if (Book.dateReturned.getDay()>Book.dateExpected.getDay() &&
+        Book.dateReturned.getMonth()==Book.dateExpected.getMonth() &&
+        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
+            fine=15*(Book.dateReturned.getDay()-Book.dateExpected.getDay());
+        }
+        //Returning the book after the expected return date and the calendar month, but within the same year of the expected date
+        if (Book.dateReturned.getMonth()>Book.dateExpected.getMonth() &&
+        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
+            fine=500*(Book.dateReturned.getMonth()-Book.dateExpected.getMonth());
+        }
+        //Returning the book after the expected return date and the year of the return date
+        else {
+            fine=10000;
+        }
+        return fine;
+}
 
     //toString method -> returns a string representation of the object
     @Override
