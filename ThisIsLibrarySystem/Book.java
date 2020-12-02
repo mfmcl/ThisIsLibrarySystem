@@ -71,7 +71,7 @@ public class Book {
     //toString method -> returns a string representation of the object
     @Override
     public String toString() {
-        return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\nIs borrowed: " + isBorrowed + "\nBorrowed by: " + borrower.getName() + "\nDate Expected:" + dateExpected.toString();
+        return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\nIs borrowed: " + isBorrowed + "\nBorrowed by: " + borrower.getName() + "\nDate Expected: " + dateExpected.toString();
     }
     
 }
