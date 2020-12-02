@@ -2,9 +2,11 @@
 
 ![](https://media1.tenor.com/images/83aebe741ef4f75418a8282469a030d0/tenor.gif?itemid=18211796)
 
-AP Computer Science A Unit 3 GRASPS project.
+AP Computer Science A Unit 3 GRASPS project by **mfmcl** and **DominikK07**
 
-#GRASPS Unit3 Standard classes: Library management system 1.0
+
+
+# GRASPS Unit3 Standard classes: Library management system 1.0
 
 ## Goal
 
