@@ -85,6 +85,7 @@ public class Book {
         this.dateReturned = dateReturned;
     }
 
+    //TODO: FIX with arguments
     public int checkFines(){
 
         //Returning the book before the expected date
