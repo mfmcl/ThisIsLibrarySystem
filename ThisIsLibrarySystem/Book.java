@@ -52,7 +52,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Borrower: " + borrower + "\nIs borrowed: " + isBorrowed + "\nDate expected: " + dateExpected.toString() + "\nBook ID: " + bookID + "\nTitle: " + title + "\nISBN: " + isbn;
+        return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\n Is borrowed:" + isBorrowed + "\nDate Expected:" + dateExpected.toString();
     }
     
 }

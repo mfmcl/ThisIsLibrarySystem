@@ -13,6 +13,6 @@ public class Reader {
 
     @Override
     public String toString() {
-        return "Reader " + name + ", ID: " + ID + ", Email: " + email;
+        return "Name: " + name + "; ID: " + ID + "; Email: " + email;
     }
 }
