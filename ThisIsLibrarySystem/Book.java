@@ -55,7 +55,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\nIs borrowed: " + isBorrowed + "\nBorrowed by: " + borrower.getName() + "\nDate Expected: " + dateExpected.toString();
+        if (isBorrowed == true) {
+            return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\nIs borrowed: " + isBorrowed + "\nBorrowed by: " + borrower.getName() + "\nDate Expected: " + dateExpected.toString();   
+        } else {
+            return "Book ID: " + bookID + "\n" + title + "\nISBN: " + isbn + "\nIs borrowed: " + isBorrowed;
+        }
     }
     
 }
