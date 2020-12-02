@@ -36,6 +36,7 @@ public class Library {
         Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
             fine=500*(Book.dateReturned.getMonth()-Book.dateExpected.getMonth());
         }
+        //Returning the book after the expected return date and the year of the return date
         else {
             fine=10000;
         }
