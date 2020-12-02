@@ -13,32 +13,6 @@ public class Library {
     public static Date getDateToday() {
         return dateToday;
     }
-        //Returning the book before the expected date
-        if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear() ||
-        Book.dateReturned.getDay()>=Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
-            fine=0;
-        }
-        //Returning the book after the expected return date, but within the same calendar month of the expected date
-        if (Book.dateReturned.getDay()>Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()==Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
-            fine=15*(Book.dateReturned.getDay()-Book.dateExpected.getDay());
-        }
-        //Returning the book after the expected return date and the calendar month, but within the same year of the expected date
-        if (Book.dateReturned.getMonth()>Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
-            fine=500*(Book.dateReturned.getMonth()-Book.dateExpected.getMonth());
-        }
-        //Returning the book after the expected return date and the year of the return date
-        else {
-            fine=10000;
-        }
-        return fine;
-}
 
     public static void main(String[] args) {
         Library library = new Library();
