@@ -2,7 +2,6 @@ package ThisIsLibrarySystem;
 
 public class Library {
     private String name;
-    private Book book1;
     private Book book2;
     private Reader reader1;
     private Reader reader2;

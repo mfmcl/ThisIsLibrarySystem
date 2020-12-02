@@ -8,6 +8,7 @@ public class Book {
     private Reader borrower;
     private Date dateExpected;
 
+
     Book() {
     }
 
@@ -37,7 +38,7 @@ public class Book {
 
     public void get(){
         isBorrowed = true;
-        //dateExpected;
+       // dateExpected;
     }
 
     public void returned(){
@@ -49,5 +50,9 @@ public class Book {
         return dateExpected;
     }
 
+    @Override
+    public String toString() {
+        return "Is borrowed: " + isBorrowed + "\nDate expected: " + dateExpected + "\nBook ID: " + bookID + "\nTitle: " + title + "\nISBN: " + isbn;
+    }
     
 }
