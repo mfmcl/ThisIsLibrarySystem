@@ -13,9 +13,6 @@ public class Library {
     public static Date getDateToday() {
         return dateToday;
     }
-
-    public int checkFines(){
-
         //Returning the book before the expected date
         if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() &&
         Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
