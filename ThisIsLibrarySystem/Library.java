@@ -26,11 +26,14 @@ public class Library {
         //Returning the book before the expected date
         if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() &&
         Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
+        Book.dateReturned.getYear()==Book.dateExpected.getYear() ||
+        Book.dateReturned.getDay()>=Book.dateExpected.getDay() &&
+        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
         Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
             fine=0;
         }
         //Returning the book after the expected return date, but within the same calendar month of the expected date
-        if (Book.dateReturned.getDay()>=Book.dateExpected.getDay() &&
+        if (Book.dateReturned.getDay()>Book.dateExpected.getDay() &&
         Book.dateReturned.getMonth()==Book.dateExpected.getMonth() &&
         Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
             fine=15*(Book.dateReturned.getDay()-Book.dateExpected.getDay());
