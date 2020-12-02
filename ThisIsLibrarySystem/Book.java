@@ -68,6 +68,22 @@ public class Book {
         return dateExpected;
     }
 
+    public Date getDateExpected() {
+        return dateExpected;
+    }
+
+    public Date getDateReturned() {
+        return dateReturned;
+    }
+
+    public void setDateExpected(Date dateExpected) {
+        this.dateExpected = dateExpected;
+    }
+
+    public void setDateReturned(Date dateReturned) {
+        this.dateReturned = dateReturned;
+    }
+
     //toString method -> returns a string representation of the object
     @Override
     public String toString() {
