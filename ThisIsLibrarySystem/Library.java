@@ -9,7 +9,7 @@ public class Library {
     public static Date dateToday = new Date(5, 5, 2020);
 
     public void setDateToday(Date dateToday) {
-        this.dateToday = dateToday;
+        Library.dateToday = dateToday;
     }
 
     public static Date getDateToday() {
