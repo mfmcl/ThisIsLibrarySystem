@@ -9,12 +9,15 @@ public class Book {
     public static Date dateExpected;
     public static Date dateReturned;
 
+    //Constructor of the Book object
+    //Assigns the bookID and title of the book
     Book(int bookID, String title) {
         this.bookID = bookID;
         this.title = title;
         this.isbn = generateISBN();
     }
 
+    //a
     public String generateISBN() {
         String isbn = "";
         for (int i = 0; i < 9; i++) {
