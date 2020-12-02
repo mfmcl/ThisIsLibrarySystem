@@ -68,9 +68,22 @@ public class Library {
         book1.get(reader1);
         book2.get(reader2);
 
-        System.out.println("Fines:" + library.checkFines());
+        // System.out.println("Fines:" + library.checkFines());
 
         library.setDateToday(5, 6, 2020);
+
+        System.out.println("Today's date is " + dateToday.toString());
+        System.out.println("\n" + book1.toString());
+        System.out.println("\n" + book2.toString());
+
+        // task 3
+        System.out.println("\nTask 3");
+
+        book1.returned();
+
+        // System.out.println("Fines:" + library.checkFines());
+
+        library.setDateToday(6, 7, 2020);
 
         System.out.println("Today's date is " + dateToday.toString());
         System.out.println("\n" + book1.toString());
