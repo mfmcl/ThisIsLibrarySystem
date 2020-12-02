@@ -3,7 +3,6 @@ package ThisIsLibrarySystem;
 import jdk.internal.vm.compiler.libgraal.LibGraalIsolate;
 
 public class Library {
-    private String name;
     private static Book book1 = new Book(1, "50 Shades of Grey");
     private static Book book2 = new Book(2, "Mein Kampf");
     private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
