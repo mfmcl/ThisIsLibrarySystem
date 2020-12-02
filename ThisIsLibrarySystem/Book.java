@@ -8,16 +8,13 @@ public class Book {
     private Reader borrower;
     private Date dateExpected;
 
-
-    Book() {
-    }
-
-    Book(int bookID, String title, String isbn) {
+    Book(int bookID, String title) {
         this.bookID = bookID;
         this.title = title;
-        this.isbn = isbn;
-    }    
-    /*
+        this.isbn = generateISBN();
+    }
+
+    public String generateISBN() {
         String isbn = "";
     for (int i = 0; i < 9; i++) {
         isbn += (int) (Math.random() * 10);
@@ -33,12 +30,13 @@ public class Book {
     else if ( sum % 11 == 1) isbn += "X";
     else isbn += (11 - sum % 11);
     
-    System.out.println("ISBN: " + isbn);
-    */
+    return isbn;
+    }
 
-    public void get(){
+    public void get(Reader borrower){
         isBorrowed = true;
-       // dateExpected;
+        dateExpected = new Date(Library.getDateToday().getDay(), Library.getDateToday().getMonth() + 1, Library.getDateToday().getYear());
+        this.borrower = borrower;
     }
 
     public void returned(){
@@ -52,7 +50,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Is borrowed: " + isBorrowed + "\nDate expected: " + dateExpected + "\nBook ID: " + bookID + "\nTitle: " + title + "\nISBN: " + isbn;
+        return "Borrower: " + borrower + "\nIs borrowed: " + isBorrowed + "\nDate expected: " + dateExpected.toString() + "\nBook ID: " + bookID + "\nTitle: " + title + "\nISBN: " + isbn;
     }
     
 }
