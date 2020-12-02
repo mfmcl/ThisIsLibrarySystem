@@ -17,7 +17,8 @@ public class Book {
         this.isbn = generateISBN();
     }
 
-    //a
+    //ISBN generator
+    //Creates a random string in ISBN10 format
     public String generateISBN() {
         String isbn = "";
         for (int i = 0; i < 9; i++) {
@@ -37,22 +38,37 @@ public class Book {
         return isbn;
     }
 
+    /*
+    The get method
+    Used when a book gets borrowed
+    Marks the book as borrowed
+    Creates the expected date of the book by adding 1 month to today's date
+    Assigns the book it's borrower
+    */
     public void get(Reader borrower){
         isBorrowed = true;
         dateExpected = new Date(Library.getDateToday().getDay(), Library.getDateToday().getMonth() + 1, Library.getDateToday().getYear());
         this.borrower = borrower;
     }
 
+    /*The return method
+    Used when a book gets returned
+    Unmarks the book as borrowed
+    Assigns no value to the expected date
+
+    */
     public void returned(){
         isBorrowed = false;
         dateExpected = null;
         dateReturned = Library.dateToday;
     }
 
+    //Getter method for the expected date of the book
     public Date expected() {
         return dateExpected;
     }
 
+    //toString method -> returns a string representation of the object
     @Override
     public String toString() {
         if (isBorrowed == true) {
