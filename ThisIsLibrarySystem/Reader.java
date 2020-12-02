@@ -11,6 +11,10 @@ public class Reader {
         this.ID = ID;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name + "; ID: " + ID + "; Email: " + email;

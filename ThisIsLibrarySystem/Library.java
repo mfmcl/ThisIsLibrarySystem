@@ -52,6 +52,7 @@ public class Library {
         library.setDateToday(5, 5, 2020);
         
         book1.get(reader1);
+        book2.get(reader2);
 
         System.out.println("Today's date is " + dateToday.toString());
         System.out.println("\nReader 1: " + reader1.toString());
