@@ -88,24 +88,24 @@ public class Book {
     public int checkFines(){
 
         //Returning the book before the expected date
-        if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear() ||
-        Book.dateReturned.getDay()>=Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()<=Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
+        if (getDateReturned().getDay()<=getDateExpected().getDay() &&
+        getDateReturned().getMonth()<=getDateExpected().getMonth() &&
+        getDateReturned().getYear()==getDateExpected().getYear() ||
+        getDateReturned().getDay()>=getDateExpected().getDay() &&
+        getDateReturned().getMonth()<=getDateExpected().getMonth() &&
+        getDateReturned().getYear()==getDateExpected().getYear()) {
             fine=0;
         }
         //Returning the book after the expected return date, but within the same calendar month of the expected date
-        if (Book.dateReturned.getDay()>Book.dateExpected.getDay() &&
-        Book.dateReturned.getMonth()==Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
-            fine=15*(Book.dateReturned.getDay()-Book.dateExpected.getDay());
+        if (getDateReturned().getDay()>getDateExpected().getDay() &&
+        getDateReturned().getMonth()==getDateExpected().getMonth() &&
+        getDateReturned().getYear()==getDateExpected().getYear()) {
+            fine=15*(getDateReturned().getDay()-getDateExpected().getDay());
         }
         //Returning the book after the expected return date and the calendar month, but within the same year of the expected date
-        if (Book.dateReturned.getMonth()>Book.dateExpected.getMonth() &&
-        Book.dateReturned.getYear()==Book.dateExpected.getYear()) {
-            fine=500*(Book.dateReturned.getMonth()-Book.dateExpected.getMonth());
+        if (getDateReturned().getMonth()>getDateExpected().getMonth() &&
+        getDateReturned().getYear()==getDateExpected().getYear()) {
+            fine=500*(getDateReturned().getMonth()-getDateExpected().getMonth());
         }
         //Returning the book after the expected return date and the year of the return date
         else {
