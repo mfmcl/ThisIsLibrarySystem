@@ -2,10 +2,11 @@ package ThisIsLibrarySystem;
 
 public class Library {
     private String name;
-    private Book book2;
-    private Reader reader1;
-    private Reader reader2;
-    public Date dateToday;
+    private static Book book1 = new Book(1, "50 Shades of Grey", "123456789X");
+    private static Book book2 = new Book(2, "Mein Kampf", "123456789X");
+    private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
+    private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
+    public static Date dateToday;
 
     public void setDateToday(Date dateToday) {
         this.dateToday = dateToday;
@@ -17,7 +18,7 @@ public class Library {
 
     public static void main(String[] args) {
         Library library = new Library();
-        Book book1 = new Book(1, "50 Shades of Grey", "123456789X");
+        
         book1.get();
         System.out.println(book1);
     }

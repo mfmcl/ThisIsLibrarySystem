@@ -13,9 +13,9 @@ public class Book {
     }
 
     Book(int bookID, String title, String isbn) {
-        bookID = this.bookID;
-        title = this.title;
-        isbn = this.isbn;
+        this.bookID = bookID;
+        this.title = title;
+        this.isbn = isbn;
     }    
     /*
         String isbn = "";

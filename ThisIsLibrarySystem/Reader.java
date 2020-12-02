@@ -9,4 +9,10 @@ public class Reader {
     Reader() {
         
     }
+
+    Reader(String name, String email, int ID) {
+        this.name = name;
+        this.email = email;
+        this.ID = ID;
+    }
 }
