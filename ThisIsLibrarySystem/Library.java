@@ -20,7 +20,13 @@ public class Library {
         Library library = new Library();
         
         book1.get();
-        System.out.println(reader1.name);
+
+        System.out.println(reader1.toString());
+        System.out.println(reader2.toString());
+        System.out.println(book1.toString());
+        System.out.println(book2.toString());
+        System.out.println("Today's date is " + dateToday.getDay() + " " + dateToday.getMonth() + " " + dateToday.getYear());
+
     }
 }
 

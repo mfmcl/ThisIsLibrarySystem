@@ -18,6 +18,6 @@ public class Reader {
 
     @Override
     public String toString() {
-        return "Reader "
+        return "Reader " + name + ", ID: " + ID + ", Email: " + email;
     }
 }
