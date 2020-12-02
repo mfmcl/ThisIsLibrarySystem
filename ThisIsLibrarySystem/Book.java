@@ -7,6 +7,7 @@ public class Book {
     private boolean isBorrowed; // true if is borrowed, false means book is in the library
     private Reader borrower;
     private Date dateExpected;
+    private Date dateReturned;
 
     Book(int bookID, String title) {
         this.bookID = bookID;
@@ -42,6 +43,7 @@ public class Book {
     public void returned(){
         isBorrowed = false;
         dateExpected = null;
+        dateReturned = Library.dateToday;
     }
 
     public Date expected() {
