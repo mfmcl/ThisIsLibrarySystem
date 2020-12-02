@@ -1,5 +1,7 @@
 package ThisIsLibrarySystem;
 
+import java.util.Scanner;
+
 public class Library {
     public static Date dateToday = new Date();
     private int fine;
@@ -15,6 +17,10 @@ public class Library {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("PRESS ENTER TO START PROGRAM");
+        sc.nextLine();
+        sc.close();
         Library library = new Library();
 
         // task 1
