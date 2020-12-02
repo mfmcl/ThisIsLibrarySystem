@@ -15,4 +15,9 @@ public class Reader {
         this.email = email;
         this.ID = ID;
     }
+
+    @Override
+    public String toString() {
+        return "Reader "
+    }
 }
