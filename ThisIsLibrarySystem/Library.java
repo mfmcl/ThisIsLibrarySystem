@@ -1,10 +1,6 @@
 package ThisIsLibrarySystem;
 
 public class Library {
-    private static Book book1 = new Book(1, "50 Shades of Grey");
-    private static Book book2 = new Book(2, "Mein Kampf");
-    private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
-    private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
     public static Date dateToday = new Date();
     private int fine;
 
@@ -49,16 +45,26 @@ public class Library {
 
     public static void main(String[] args) {
         Library library = new Library();
+
+        // task 1
         library.setDateToday(5, 5, 2020);
-        
-        book1.get(reader1);
-        book2.get(reader2);
+
+        Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
+        Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
+        Book book1 = new Book(1, "50 Shades of Grey");
+        Book book2 = new Book(2, "Mein Kampf");
 
         System.out.println("Today's date is " + dateToday.toString());
         System.out.println("\nReader 1: " + reader1.toString());
-        System.out.println("\n" + book1.toString());
-        System.out.println("\n" + book2.toString());
+        System.out.println("Reader 2: " + reader2.toString());
 
+        // task 2
+        book1.get(reader1);
+        book2.get(reader2);
+
+       System.out.println("Fines:" + library.checkFines());
+
+       library.setDateToday(5, 6, 2020);
     }
 }
 
