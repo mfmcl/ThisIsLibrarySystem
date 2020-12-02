@@ -6,7 +6,7 @@ public class Library {
     private static Book book2 = new Book(2, "Mein Kampf");
     private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
     private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
-    public static Date dateToday = new Date(5, 5, 2020);
+    public static Date dateToday;
 
     public void setDateToday(Date dateToday) {
         Library.dateToday = dateToday;
@@ -19,6 +19,7 @@ public class Library {
 
     public static void main(String[] args) {
         Library library = new Library();
+        library.setDateToday(5, 5, 2020);
         
         book1.get(reader1);
 

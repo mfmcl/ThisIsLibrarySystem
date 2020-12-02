@@ -36,7 +36,7 @@ Option B) desing library as dynamic system using Arrays/ArrayLists. Use randomiz
 
 - Set a date (format:dd mm yyyy) to 5 5 2020
 
-- Print all Libraty fields in readable format
+- Print all Library fields in readable format
 
 ### Task 2:
 
