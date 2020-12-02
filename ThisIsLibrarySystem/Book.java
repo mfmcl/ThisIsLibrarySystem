@@ -6,8 +6,8 @@ public class Book {
     private String isbn; // TODO: use method from homework
     private boolean isBorrowed; // true if is borrowed, false means book is in the library
     private Reader borrower;
-    public static Date dateExpected;
-    public static Date dateReturned;
+    public Date dateExpected;
+    public Date dateReturned;
 
     //Constructor of the Book object
     //Assigns the bookID and title of the book
