@@ -12,6 +12,12 @@ public class Date {
     private int minYear = 1900;
     private int maxYear = 2030;
 
+    Date() {
+        this.day = minDay;
+        this.month = minMonth;
+        this.year = minYear;
+    }
+
     Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
@@ -44,7 +50,7 @@ public class Date {
     
     @Override
     public String toString() {
-        return "Day "day + ", Month " + month + ", Year " + year;
+        return "Day " + day + ", Month " + month + ", Year " + year;
     }
 }
 
