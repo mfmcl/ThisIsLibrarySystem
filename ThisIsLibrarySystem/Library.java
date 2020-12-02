@@ -7,6 +7,7 @@ public class Library {
     private static Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
     private static Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
     public static Date dateToday;
+    private int fine;
 
     public void setDateToday(Date dateToday) {
         Library.dateToday = dateToday;
@@ -14,6 +15,22 @@ public class Library {
 
     public static Date getDateToday() {
         return dateToday;
+    }
+
+    public int checkFines(){
+        Book.dateExpected.getDay();
+        Book.dateExpected.getMonth();
+        Book.dateExpected.getYear();
+
+        Book.dateReturned.getDay();
+        Book.dateReturned.getMonth();
+        Book.dateReturned.getYear();
+        if (Book.dateReturned.getDay()==Book.dateExpected.getDay() && Book.dateReturned.getMonth()==Book.dateExpected.getMonth()) {
+            fine=0;
+        } else {
+            
+        }
+        return fine;
     }
 
 

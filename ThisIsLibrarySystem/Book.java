@@ -6,8 +6,8 @@ public class Book {
     private String isbn; // TODO: use method from homework
     private boolean isBorrowed; // true if is borrowed, false means book is in the library
     private Reader borrower;
-    private Date dateExpected;
-    private Date dateReturned;
+    public static Date dateExpected;
+    public static Date dateReturned;
 
     Book(int bookID, String title) {
         this.bookID = bookID;
