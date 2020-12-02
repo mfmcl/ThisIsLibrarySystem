@@ -25,9 +25,9 @@ public class Library {
         Book.dateReturned.getDay();
         Book.dateReturned.getMonth();
         Book.dateReturned.getYear();
-        if (Book.dateReturned.getDay()==Book.dateExpected.getDay() && Book.dateReturned.getMonth()==Book.dateExpected.getMonth()) {
+        if (Book.dateReturned.getDay()<=Book.dateExpected.getDay() && Book.dateReturned.getMonth()<=Book.dateExpected.getMonth()) {
             fine=0;
-        } else {
+        }if (Book.dateReturned.getDay()==Book.dateExpected.getDay() && Book.dateReturned.getMonth()==Book.dateExpected.getMonth()) {
             
         }
         return fine;
