@@ -19,12 +19,12 @@ public class Library {
         // task 1
         System.out.println("Task 1");
 
-        library.setDateToday(5, 5, 2020);
-
         Reader reader1 = new Reader("Joe", "joemamma@hotmail.com", 1);
         Reader reader2 = new Reader("Jane", "janeee@gmail.com", 2);
         Book book1 = new Book(1, "50 Shades of Grey");
         Book book2 = new Book(2, "Mein Kampf");
+
+        library.setDateToday(5, 5, 2020);
 
         System.out.println("Today's date is " + dateToday.toString());
         System.out.println("\nReader 1: " + reader1.toString());
@@ -58,6 +58,16 @@ public class Library {
         System.out.println("Today's date is " + dateToday.toString());
         System.out.println("\n" + book1.toString());
         System.out.println("\n" + book2.toString());
+
+        // task 4
+        System.out.println("\nTask 4");
+
+        book2.returned();
+
+        System.out.println("\n" + book2.toString());
+
+        // System.out.println("Fines:" + library.checkFines());
+
 
     }
 }
