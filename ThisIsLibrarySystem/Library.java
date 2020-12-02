@@ -1,5 +1,7 @@
 package ThisIsLibrarySystem;
 
+import jdk.internal.vm.compiler.libgraal.LibGraalIsolate;
+
 public class Library {
     private String name;
     private static Book book1 = new Book(1, "50 Shades of Grey");
@@ -9,8 +11,10 @@ public class Library {
     public static Date dateToday;
     private int fine;
 
-    public void setDateToday(Date dateToday) {
-        Library.dateToday = dateToday;
+    public void setDateToday(int day, int month, int year) {
+        Library.dateToday.setDay(day);
+        Library.dateToday.setMonth(month);
+        Library.dateToday.setYear(year);
     }
 
     public static Date getDateToday() {
