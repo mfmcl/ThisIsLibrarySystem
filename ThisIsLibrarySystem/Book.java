@@ -17,21 +17,21 @@ public class Book {
 
     public String generateISBN() {
         String isbn = "";
-    for (int i = 0; i < 9; i++) {
-        isbn += (int) (Math.random() * 10);
-    }
-    int temp = Integer.parseInt(isbn);
-    int sum = 0;
-    for (int i = 2; i <= 10; i++) {
-        int d = temp % 10;
-        sum += i * d;
-        temp /= 10;
-    }        
-    if (sum % 11 == 0) isbn += "0";
-    else if ( sum % 11 == 1) isbn += "X";
-    else isbn += (11 - sum % 11);
-    
-    return isbn;
+        for (int i = 0; i < 9; i++) {
+            isbn += (int) (Math.random() * 10);
+        }
+        int temp = Integer.parseInt(isbn);
+        int sum = 0;
+        for (int i = 2; i <= 10; i++) {
+            int d = temp % 10;
+            sum += i * d;
+            temp /= 10;
+        }        
+        if (sum % 11 == 0) isbn += "0";
+        else if ( sum % 11 == 1) isbn += "X";
+        else isbn += (11 - sum % 11);
+        
+        return isbn;
     }
 
     public void get(Reader borrower){
