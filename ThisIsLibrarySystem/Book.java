@@ -86,7 +86,8 @@ public class Book {
     }
 
     //TODO: FIX with arguments
-    public int checkFines(){
+    public int checkFines(Date dateReturned, Date dateExpected){
+        this.dateReturned = dateReturned;
 
         //Returning the book before the expected date
         if (getDateReturned().getDay()<=getDateExpected().getDay() &&
