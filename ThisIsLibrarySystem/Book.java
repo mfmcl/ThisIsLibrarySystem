@@ -57,7 +57,7 @@ public class Book {
     /*
      * The return method Used when a book gets returned Unmarks the book as borrowed
      * Assigns no value to the expected date
-     * 
+     * Sets the date returned as today's date
      */
     public void returned() {
         isBorrowed = false;
