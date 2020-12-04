@@ -60,7 +60,7 @@ public class Book {
      * Sets the date returned as today's date
      */
     public void returned() {
-        System.out.println(borrower + "Returned " + title);
+        System.out.println(borrower.getName() + " returned " + title);
         System.out.println("Fine:" + checkFines());
         isBorrowed = false;
     }
