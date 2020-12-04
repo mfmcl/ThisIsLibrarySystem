@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Library {
     public static Date dateToday = new Date();
-    private int fine;
 
     public void setDateToday(int day, int month, int year) {
         Library.dateToday.setDay(day);
@@ -47,7 +46,8 @@ public class Library {
         book2.get(reader2);
 
         // check fines
-
+        System.out.println(book1.checkFines());
+        System.out.println(book2.checkFines());
 
         library.setDateToday(5, 6, 2020);
 
@@ -61,6 +61,8 @@ public class Library {
         book1.returned();
 
         // check fines
+        System.out.println(book1.checkFines());
+        System.out.println(book2.checkFines());
 
 
         library.setDateToday(6, 7, 2020);
@@ -74,9 +76,11 @@ public class Library {
 
         book2.returned();
 
-        System.out.println("\n" + book2.toString() + " Returned: " + book2.getDateReturned());
+        System.out.println("\n" + book2.toString());
 
         // check fines
+        System.out.println(book1.checkFines());
+        System.out.println(book2.checkFines());
 
 
     }
