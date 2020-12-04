@@ -86,42 +86,35 @@ public class Book {
     }
 
     // TODO: FIX with arguments
-    public int checkFines(Date dateReturned, Date dateExpected) {
-        this.dateReturned = dateReturned;
-        this.dateExpected = dateExpected;
+    public int checkFines() {
 
-        if (dateExpected == null || dateReturned == null) {
-            fine = 0;
-        } else {
             // Returning the book before the expected date
-            if (getDateReturned().getDay() <= getDateExpected().getDay()
-                    && getDateReturned().getMonth() <= getDateExpected().getMonth()
-                    && getDateReturned().getYear() == getDateExpected().getYear()
-                    || getDateReturned().getDay() >= getDateExpected().getDay()
-                            && getDateReturned().getMonth() <= getDateExpected().getMonth()
-                            && getDateReturned().getYear() == getDateExpected().getYear()) {
+            if (Library.getDateToday().getDay() <= getDateExpected().getDay()
+                    && Library.getDateToday().getMonth() <= getDateExpected().getMonth()
+                    && Library.getDateToday().getYear() == getDateExpected().getYear()
+                    || Library.getDateToday().getDay() >= getDateExpected().getDay()
+                            && Library.getDateToday().getMonth() <= getDateExpected().getMonth()
+                            && Library.getDateToday().getYear() == getDateExpected().getYear()) {
                 fine = 0;
             }
             // Returning the book after the expected return date, but within the same
             // calendar month of the expected date
-            if (getDateReturned().getDay() > getDateExpected().getDay()
-                    && getDateReturned().getMonth() == getDateExpected().getMonth()
-                    && getDateReturned().getYear() == getDateExpected().getYear()) {
-                fine = 15 * (getDateReturned().getDay() - getDateExpected().getDay());
+            if (Library.getDateToday().getDay() > getDateExpected().getDay()
+                    && Library.getDateToday().getMonth() == getDateExpected().getMonth()
+                    && Library.getDateToday().getYear() == getDateExpected().getYear()) {
+                fine = 15 * (Library.getDateToday().getDay() - getDateExpected().getDay());
             }
             // Returning the book after the expected return date and the calendar month, but
             // within the same year of the expected date
-            if (getDateReturned().getMonth() > getDateExpected().getMonth()
-                    && getDateReturned().getYear() == getDateExpected().getYear()) {
-                fine = 500 * (getDateReturned().getMonth() - getDateExpected().getMonth());
+            if (Library.getDateToday().getMonth() > getDateExpected().getMonth()
+                    && Library.getDateToday().getYear() == getDateExpected().getYear()) {
+                fine = 500 * (Library.getDateToday().getMonth() - getDateExpected().getMonth());
             }
             // Returning the book after the expected return date and the year of the return
             // date
             else {
                 fine = 10000;
             }
-
-        }
         return fine;
     }
 
