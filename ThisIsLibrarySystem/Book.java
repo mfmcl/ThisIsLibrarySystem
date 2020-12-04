@@ -90,14 +90,14 @@ public class Book {
             }
             // Returning the book after the expected return date, but within the same
             // calendar month of the expected date
-            if (Library.getDateToday().getDay() > getDateExpected().getDay()
+            else if (Library.getDateToday().getDay() > getDateExpected().getDay()
                     && Library.getDateToday().getMonth() == getDateExpected().getMonth()
                     && Library.getDateToday().getYear() == getDateExpected().getYear()) {
                 fine = 15 * (Library.getDateToday().getDay() - getDateExpected().getDay());
             }
             // Returning the book after the expected return date and the calendar month, but
             // within the same year of the expected date
-            if (Library.getDateToday().getMonth() > getDateExpected().getMonth()
+            else if (Library.getDateToday().getMonth() > getDateExpected().getMonth()
                     && Library.getDateToday().getYear() == getDateExpected().getYear()) {
                 fine = 500 * (Library.getDateToday().getMonth() - getDateExpected().getMonth());
             }
