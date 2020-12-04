@@ -77,7 +77,7 @@ public class Book {
 
     // TODO: FIX with arguments
     public int checkFines() {
-
+        if (isBorrowed) {
             // Returning the book before the expected date
             if (Library.getDateToday().getDay() <= getDateExpected().getDay()
                     && Library.getDateToday().getMonth() <= getDateExpected().getMonth()
@@ -100,11 +100,12 @@ public class Book {
                     && Library.getDateToday().getYear() == getDateExpected().getYear()) {
                 fine = 500 * (Library.getDateToday().getMonth() - getDateExpected().getMonth());
             }
-            // Returning the book after the expected return date and the year of the return
+            // Retsurning the book after the expected return date and the year of the return
             // date
             else {
                 fine = 10000;
             }
+        } else fine = 0;
         return fine;
     }
 
