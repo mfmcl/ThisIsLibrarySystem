@@ -59,6 +59,7 @@ public class Book {
      * Sets the date returned as today's date
      */
     public void returned() {
+        System.out.println(checkFines());
         isBorrowed = false;
     }
 

@@ -60,10 +60,6 @@ public class Library {
 
         book1.returned();
 
-        // check fines
-        System.out.println(book1.checkFines());
-        System.out.println(book2.checkFines());
-
 
         library.setDateToday(6, 7, 2020);
 
@@ -77,10 +73,6 @@ public class Library {
         book2.returned();
 
         System.out.println("\n" + book2.toString());
-
-        // check fines
-        System.out.println(book1.checkFines());
-        System.out.println(book2.checkFines());
 
 
     }
