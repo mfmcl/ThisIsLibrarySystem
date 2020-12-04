@@ -51,6 +51,7 @@ public class Book {
         dateExpected = new Date(Library.getDateToday().getDay(), Library.getDateToday().getMonth() + 1,
                 Library.getDateToday().getYear());
         this.borrower = borrower;
+        System.out.println(borrower.getName() + " borrowed " + title);
     }
 
     /*
@@ -59,7 +60,8 @@ public class Book {
      * Sets the date returned as today's date
      */
     public void returned() {
-        System.out.println(checkFines());
+        System.out.println(borrower + "Returned " + title);
+        System.out.println("Fine:" + checkFines());
         isBorrowed = false;
     }
 
