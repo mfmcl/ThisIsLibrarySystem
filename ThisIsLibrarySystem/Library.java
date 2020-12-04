@@ -16,14 +16,6 @@ public class Library {
         return dateToday;
     }
 
-    public int fineCheck(Book book) {
-        if (book.getDateExpected().getDay() <= book.getDateReturned().getDay()) {
-            fine = 0;
-        } else fine = 1;
-        return fine;
-    }
-
-
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -54,8 +46,8 @@ public class Library {
         book1.get(reader1);
         book2.get(reader2);
 
-        // System.out.println("Fines:" + library.checkFines());
-        System.out.println(book1.checkFines(book1.getDateReturned(), book1.getDateExpected()));
+        // check fines
+
 
         library.setDateToday(5, 6, 2020);
 
@@ -68,7 +60,8 @@ public class Library {
 
         book1.returned();
 
-        // System.out.println("Fines:" + library.checkFines());
+        // check fines
+
 
         library.setDateToday(6, 7, 2020);
 
@@ -83,9 +76,7 @@ public class Library {
 
         System.out.println("\n" + book2.toString() + " Returned: " + book2.getDateReturned());
 
-        System.out.println(book2.checkFines(book2.getDateReturned(), book2.getDateExpected()));
-
-        // System.out.println("Fines:" + library.checkFines());
+        // check fines
 
 
     }

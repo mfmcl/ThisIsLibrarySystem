@@ -7,7 +7,6 @@ public class Book {
     private boolean isBorrowed; // true if is borrowed, false means book is in the library
     private Reader borrower;
     public Date dateExpected;
-    public Date dateReturned;
     private int fine;
 
     // Constructor of the Book object
@@ -61,7 +60,6 @@ public class Book {
      */
     public void returned() {
         isBorrowed = false;
-        dateReturned = Library.dateToday;
     }
 
     // Getter method for the expected date of the book
@@ -73,16 +71,8 @@ public class Book {
         return dateExpected;
     }
 
-    public Date getDateReturned() {
-        return dateReturned;
-    }
-
     public void setDateExpected(Date dateExpected) {
         this.dateExpected = dateExpected;
-    }
-
-    public void setDateReturned(Date dateReturned) {
-        this.dateReturned = dateReturned;
     }
 
     // TODO: FIX with arguments
